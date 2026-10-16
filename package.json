@@ -7,12 +7,18 @@
     "pi-package"
   ],
   "files": [
+    "agents/",
     "extensions/",
     "skills/",
     "prompts/",
     "themes/"
   ],
   "pi": {
+    "subagents": {
+      "agents": [
+        "./agents"
+      ]
+    },
     "extensions": [
       "./extensions"
     ],

@@ -7,18 +7,20 @@ Basis für ein Pi Package mit Extensions, Skills, Prompt-Vorlagen und Themes.
 ```text
 rw-pi-backpack/
 ├── package.json
+├── agents/
 ├── extensions/
 ├── skills/
 ├── prompts/
 └── themes/
 ```
 
+- `agents/`: Markdown-Dateien für die Extension `pi-subagents`.
 - `extensions/`: TypeScript- oder JavaScript-Dateien. Mehrteilige Extensions erhalten ein Unterverzeichnis mit `index.ts` oder `index.js`.
 - `skills/`: Ein Unterverzeichnis pro Skill mit einer `SKILL.md`.
 - `prompts/`: Markdown-Dateien für wiederverwendbare Prompt-Befehle.
 - `themes/`: JSON-Dateien für Pi-Themes.
 
-Das Paket enthält das Theme `cyberpunk`. Die übrigen Ressourcenverzeichnisse enthalten nur `.gitkeep`-Platzhalter. Die Ressourcenpfade sind in `package.json` unter `pi` festgelegt.
+Das Paket enthält das Theme `cyberpunk`. Die Verzeichnisse `extensions/`, `skills/` und `prompts/` enthalten nur `.gitkeep`-Platzhalter. Die Ressourcenpfade sind in `package.json` unter `pi` festgelegt.
 
 ## Lokal verwenden
 
@@ -35,6 +37,18 @@ pi install /absoluter/pfad/zu/rw-pi-backpack
 ```
 
 Nach Änderungen in einer laufenden Pi-Sitzung `/reload` ausführen.
+
+## Subagents
+
+Die Agent-Definitionen in `agents/` werden über `pi.subagents.agents` in `package.json` bereitgestellt und mit dem Paket ausgeliefert. Sie benötigen die separat installierte Extension:
+
+```bash
+pi install npm:pi-subagents
+```
+
+Enthalten sind `advisor`, `docs`, `grep`, `search` und `linear-issue-reader`. Eigene Benutzer- oder Projektdefinitionen mit demselben Agent-Namen haben Vorrang vor Paketdefinitionen.
+
+Die in den Agent-Dateien festgelegten Modelle müssen verfügbar sein. `linear-issue-reader` benötigt den MCP-Server `linear`.
 
 ## Cyberpunk-Theme
 
