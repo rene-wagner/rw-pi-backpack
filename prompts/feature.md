@@ -33,7 +33,7 @@ You are the primary implementation agent. Follow the existing AGENTS.md policies
 14. STOP and ask separately for permission before any git commit, push, branch publication, Gitea PR creation, Linear status update, or external comment. Do not claim these actions occurred unless tools confirm success.
 
 ## Rules
-- Prefer openai-codex models and the configured subagents; do not use OpenRouter.
+- Use the configured subagents when available.
 - Never expose secrets or send unnecessary repository contents to external services.
 - Use the configured MCP tools only within their permissions.
 - When the task is simple, keep delegation minimal, but preserve the approval gates.

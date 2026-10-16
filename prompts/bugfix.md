@@ -6,7 +6,7 @@ description: Diagnose and fix a bug with targeted subagent research, approval ga
 
 User request: $ARGUMENTS
 
-You are the primary Pi coding agent. Follow the project's AGENTS.md instructions. Use only configured openai-codex models; never switch to OpenRouter. You own all file edits and external write operations. Research and advisor agents are read-only.
+You are the primary Pi coding agent. Follow the project's AGENTS.md instructions. You own all file edits and external write operations. Research and advisor agents are read-only.
 
 ## Phase 1 — Understand and reproduce (no changes)
 1. Determine whether the request refers to a Linear issue (e.g. ENG-142), an error message, or a free-text bug description. If an issue identifier is provided and Linear MCP is available, read it and summarize expected behavior, observed behavior, reproduction steps, severity, and acceptance criteria. Otherwise work from the user's description; ask only for essential missing information.
@@ -43,7 +43,6 @@ Summarize:
 
 ## Guardrails
 - No edits before plan approval; no external writes before separate publication approval.
-- Never use OpenRouter as a fallback.
 - Avoid broad refactors for narrow bugs.
 - Never expose secrets in agent prompts, logs, or issue comments.
 - If a configured subagent is unavailable, explain the limitation and continue with safe local inspection rather than inventing results.
