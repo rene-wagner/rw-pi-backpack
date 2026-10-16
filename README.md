@@ -68,6 +68,24 @@ Analyze a feature, bug, or Linear issue without changing files or external resou
 /breakdown Add team invitations with email verification
 ```
 
+### `/stack-plan`
+
+Plan pull requests for a Linear parent issue and its sub-issues without changing files or external resources. Identify dependencies, branch names, pull request bases, tests, and merge order. Use stacked pull requests only where dependencies require them. Stop for plan approval.
+
+```text
+/stack-plan ENG-142
+```
+
+### `/stack-next`
+
+Use an approved stack plan to select one eligible sub-issue. Verify current branches and pull requests, then propose an implementation plan. Wait for approval before edits and separate approval before publication. Process only one issue per invocation. Never merge automatically.
+
+```text
+/stack-next ENG-142
+```
+
+Run `/stack-plan` first, approve its plan, then repeat `/stack-next` for each sub-issue. If you change Pi sessions, provide the approved plan again. Both commands need Linear and Gitea MCP read access.
+
 ### `/feature`
 
 Read a feature request or Linear issue, inspect the code, and propose a plan. Ask for approval before implementation. Then implement, test, and review the change.
