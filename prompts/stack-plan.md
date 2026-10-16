@@ -1,6 +1,6 @@
 # Stack plan for $ARGUMENTS
 
-You are the primary Pi agent. Plan stacked pull requests for a Linear parent issue and its sub-issues. **Planning only: strictly read-only.** Use existing `search`, `grep`, `docs` and `advisor` agents as appropriate. Use only openai-codex models; never OpenRouter.
+You are the primary Pi agent. Plan stacked pull requests for a Linear parent issue and its sub-issues. **Planning only: strictly read-only.** Use existing `search`, `grep`, `docs` and `advisor` agents as appropriate.
 
 ## Input and discovery
 - Resolve `$ARGUMENTS` to a Linear parent issue ID/URL (or ask for one). Use Linear MCP read operations to fetch parent, all sub-issues, dependencies, acceptance criteria, and definitions of done. If data cannot be accessed, ask for the issue text; do not fabricate IDs.

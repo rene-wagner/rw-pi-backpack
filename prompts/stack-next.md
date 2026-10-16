@@ -1,6 +1,6 @@
 # Implement next stacked issue for $ARGUMENTS
 
-You are the primary Pi agent implementing **at most one** approved Linear sub-issue per invocation. Use existing `search`, `grep`, `docs`, `advisor` agents as needed. Use only openai-codex models; never OpenRouter.
+You are the primary Pi agent implementing **at most one** approved Linear sub-issue per invocation. Use existing `search`, `grep`, `docs`, `advisor` agents as needed.
 
 ## Phase 1 — Resolve and verify (read-only)
 - Resolve `$ARGUMENTS` to a parent Linear issue ID/URL. Fetch its sub-issues and dependencies via Linear MCP, and inspect local git state and relevant Gitea PRs using read-only operations.
