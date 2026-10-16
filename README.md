@@ -59,6 +59,15 @@ a recommendation. Do not change files.
 
 The templates in `prompts/` guide Pi through common development tasks.
 
+### `/breakdown`
+
+Analyze a feature, bug, or Linear issue without changing files or external resources. Propose sub-issues with acceptance criteria, a separate Definition of Done for each item, dependencies, size, and risks. Include an execution order and an overall Definition of Done. Do not implement changes or create issues.
+
+```text
+/breakdown ENG-142
+/breakdown Add team invitations with email verification
+```
+
 ### `/feature`
 
 Read a feature request or Linear issue, inspect the code, and propose a plan. Ask for approval before implementation. Then implement, test, and review the change.
