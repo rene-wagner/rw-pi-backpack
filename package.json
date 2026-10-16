@@ -1,0 +1,29 @@
+{
+  "name": "rw-pi-backpack",
+  "version": "0.1.0",
+  "description": "Sammlung von Extensions, Skills, Prompt-Vorlagen und Themes für Pi.",
+  "type": "module",
+  "keywords": [
+    "pi-package"
+  ],
+  "files": [
+    "extensions/",
+    "skills/",
+    "prompts/",
+    "themes/"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts"
+    ],
+    "themes": [
+      "./themes"
+    ]
+  }
+}
